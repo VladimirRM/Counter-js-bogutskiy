@@ -5,7 +5,9 @@ function App() {
 
 const [counter,setCounter]= useState( 5)
 
-
+const changeCount = ()=>{
+  setCounter(counter+1)
+}
 
   return (
     <div className="App">
