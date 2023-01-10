@@ -5,9 +5,12 @@ function App() {
 
 const [counter,setCounter]= useState( 5)
 
+
+
   return (
     <div className="App">
-       
+       {counter}
+       <button onClick={changeCount}></button>
     </div>
   );
 }
