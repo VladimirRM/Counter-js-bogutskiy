@@ -12,7 +12,8 @@ const changeCount = ()=>{
   return (
     <div className="App">
        {counter}
-       <button onClick={changeCount}></button>
+       <button onClick={changeCount}>Plus</button>
+       <button onClick={changeCount}>Plus</button>
     </div>
   );
 }
