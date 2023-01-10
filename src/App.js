@@ -5,15 +5,18 @@ function App() {
 
 const [counter,setCounter]= useState( 5)
 
-const changeCount = ()=>{
+const changePlus = ()=>{
+  setCounter(counter+1)
+}
+const changeMinus = ()=>{
   setCounter(counter+1)
 }
 
   return (
     <div className="App">
        {counter}
-       <button onClick={changeCount}>Plus</button>
-       <button onClick={changeCount}>Plus</button>
+       <button onClick={changePlus}>Plus</button>
+       <button onClick={changeMinus}>Plus</button>
     </div>
   );
 }
