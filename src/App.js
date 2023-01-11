@@ -7,11 +7,11 @@ const initialCounters = [
   },
   {
     id: sgh,
-    value: 10,
+    value: 20,
   },
   {
     id: dh,
-    value: 10,
+    value: 30,
   },
 ];
 
