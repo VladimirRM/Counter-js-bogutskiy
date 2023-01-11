@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+ const initialCounters = []
 
 function App() {
   const [counter, setCounter] = useState(5);
