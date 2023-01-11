@@ -28,8 +28,9 @@ function App() {
   return (
     <div className="App">
       <ul>
-      {counters.map(el=>)}
-
+        {counters.map((el) => (
+          <li key={el.id}></li>
+        ))}
       </ul>
       <button onClick={changePlus}>Plus</button>
       <button onClick={changeMinus}>Minus</button>
