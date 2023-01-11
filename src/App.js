@@ -31,6 +31,14 @@ function App() {
     setCounters(updatedCounts);
   };
 
+  const addCounter = () => {
+    const newCount = {
+      id: Math.random(),
+      value: 0,
+    };
+    setCounters([...counters,newCount])
+  };
+
   return (
     <div className="App">
       <ul>
@@ -42,6 +50,7 @@ function App() {
           </li>
         ))}
       </ul>
+      <button onClick={}></button>
     </div>
   );
 }
