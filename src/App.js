@@ -1,9 +1,22 @@
 import React, { useState } from "react";
 import "./App.css";
- const initialCounters = []
+const initialCounters = [
+  {
+    id: 123,
+    value: 10,
+  },
+  {
+    id: sgh,
+    value: 10,
+  },
+  {
+    id: dh,
+    value: 10,
+  },
+];
 
 function App() {
-  const [counter, setCounter] = useState(5);
+  const [counters, setCounters] = useState(5);
 
   const changePlus = () => {
     setCounter(counter + 1);
