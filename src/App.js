@@ -16,15 +16,19 @@ const initialCounters = [
 ];
 
 function App() {
-  const [counters, setCounters] = useState(5);
+  const [counters, setCounters] = useState(initialCounters);
 
   const changePlus = (id) => {
-    const updatedCounts = counters.map((el) => el.id);
-    setCounters();
+    const updatedCounts = counters.map((el) =>
+      el.id === id ? { ...el, value: el.value + 1 } : el
+    );
+    setCounters(updatedCounts);
   };
-  const changeMinus = () => {
-    const updatedCounts = counters.map((el) => el.id);
-    setCounters();
+  const changeMinus = (id) => {
+    const updatedCounts = counters.map((el) =>
+      el.id === id ? { ...el, value: el.value - 1 } : el
+    );
+    setCounters(updatedCounts);
   };
 
   return (
@@ -32,9 +36,9 @@ function App() {
       <ul>
         {counters.map((el) => (
           <li key={el.id}>
-            <button onClick={() => changePlus(el.id)}>Plus</button>
-            {el.value}
             <button onClick={() => changeMinus(el.id)}>Minus</button>
+            {el.value}
+            <button onClick={() => changePlus(el.id)}>Plus</button>
           </li>
         ))}
       </ul>
