@@ -36,9 +36,14 @@ function App() {
       id: Math.random(),
       value: 0,
     };
-    setCounters([...counters,newCount])
+    setCounters([...counters, newCount]);
   };
 
+  const deleteCounts = (id) => {
+ setCounters(counters.filter((el) =>el.id !== id) 
+      
+  )
+return  counters};
   return (
     <div className="App">
       <ul>
@@ -47,10 +52,11 @@ function App() {
             <button onClick={() => changeMinus(el.id)}>Minus</button>
             {el.value}
             <button onClick={() => changePlus(el.id)}>Plus</button>
+            <button onClick={() => deleteCounts(el.id)}>Delete counts</button>
           </li>
         ))}
       </ul>
-      <button onClick={}></button>
+      <button onClick={addCounter}>Add counters</button>
     </div>
   );
 }
