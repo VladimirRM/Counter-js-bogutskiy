@@ -19,15 +19,18 @@ function App() {
   const [counters, setCounters] = useState(5);
 
   const changePlus = () => {
-    setCounter(counter + 1);
+    // setCounter(counter + 1);
   };
   const changeMinus = () => {
-    setCounter(counter - 1);
+    // setCounter(counter - 1);
   };
 
   return (
     <div className="App">
-      {counter}
+      <ul>
+      {counters.map(el=>)}
+
+      </ul>
       <button onClick={changePlus}>Plus</button>
       <button onClick={changeMinus}>Minus</button>
     </div>
