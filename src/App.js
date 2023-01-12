@@ -1,19 +1,20 @@
-import React,{useState} from 'react'
+import React, { useState } from "react";
+import "./index.css";
+import "./App.css";
 
 const App = () => {
+  const [count, setCount] = useState(0);
 
-  const [count,setCount] = useState(0)
-
-  const plus =()=>{
-    setCount(count + 1)
-  }
+  const changePlus = () => {
+    setCount(count + 1);
+  };
   return (
     <div>
       <button>Minus</button>
       {count}
-      <button>Plus</button>
+      <button onClick={() => changePlus()}>Plus</button>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
