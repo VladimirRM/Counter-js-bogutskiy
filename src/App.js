@@ -8,9 +8,12 @@ const App = () => {
   const changePlus = () => {
     setCount(count + 1);
   };
+  const changeMinus = () => {
+    setCount(count - 1);
+  };
   return (
     <div>
- <button onClick={() => changeMinus()}>Minus</button>
+      <button onClick={() => changeMinus()}>Minus</button>
       {count}
       <button onClick={() => changePlus()}>Plus</button>
     </div>
