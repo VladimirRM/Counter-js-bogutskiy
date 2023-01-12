@@ -9,22 +9,24 @@ const initialCounters = [
   },
   {
     id: 456,
-    value: 10,
+    value: 20,
   },
   {
     id: 789,
-    value: 10,
+    value: 30,
   },
 ];
 
 const App = () => {
   const [counters, setCounters] = useState(initialCounters);
 
-  const changePlus = () => {
-    setCount(counters + 1);
+  const changePlus = (id) => {
+    const updatedCounts = counters.map((el) =>
+      el.id === id ? { ...el, value: el.value + 1 } : el
+    );
   };
-  const changeMinus = () => {
-    setCount(counters - 1);
+  const changeMinus = (id) => {
+    setCounters(counters - 1);
   };
   return (
     <div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import "./App.css";
 const initialCounters = [
   {
@@ -60,4 +60,4 @@ function App() {
   );
 }
 
-export default App;
+// export default App;
