@@ -4,7 +4,9 @@ const App = () => {
 
   const [count,setCount] = useState(0)
   return (
-    <div></div>
+    <div>
+      {count}
+    </div>
   )
 }
 
