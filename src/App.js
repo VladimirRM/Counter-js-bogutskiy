@@ -2,6 +2,21 @@ import React, { useState } from "react";
 import "./index.css";
 import "./App.css";
 
+const initialCounters = [
+  {
+    id: 123,
+    value: 10,
+  },
+  {
+    id: 456,
+    value: 10,
+  },
+  {
+    id: 789,
+    value: 10,
+  },
+];
+
 const App = () => {
   const [count, setCount] = useState(0);
 
