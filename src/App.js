@@ -10,7 +10,7 @@ const App = () => {
   };
   return (
     <div>
-      <button>Minus</button>
+ <button onClick={() => changeMinus()}>Minus</button>
       {count}
       <button onClick={() => changePlus()}>Plus</button>
     </div>
