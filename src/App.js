@@ -18,7 +18,7 @@ const initialCounters = [
 ];
 
 const App = () => {
-  const [counters, setCounters] = useState(0);
+  const [counters, setCounters] = useState(initialCounters);
 
   const changePlus = () => {
     setCount(counters + 1);
