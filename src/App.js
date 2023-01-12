@@ -18,19 +18,25 @@ const initialCounters = [
 ];
 
 const App = () => {
-  const [count, setCount] = useState(0);
+  const [counters, setCounters] = useState(0);
 
   const changePlus = () => {
-    setCount(count + 1);
+    setCount(counters + 1);
   };
   const changeMinus = () => {
-    setCount(count - 1);
+    setCount(counters - 1);
   };
   return (
     <div>
-      <button onClick={() => changeMinus()}>Minus</button>
-      {count}
-      <button onClick={() => changePlus()}>Plus</button>
+      <ul>
+        {counters.map((el) => (
+          <li key={el.id}>
+            <button onClick={() => changeMinus(el.id)}>Minus</button>
+            {el.value}
+            <button onClick={() => changePlus(el.id)}>Plus</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
