@@ -36,6 +36,10 @@ const App = () => {
     };
     setCounters([...counters, newCount]);
   };
+
+  const deleteCounter = (id) => {
+    setCounters(counters.filter((el) => el.id !== id));
+  };
   return (
     <div>
       <ul>
