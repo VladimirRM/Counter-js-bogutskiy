@@ -28,6 +28,7 @@ const App = () => {
       el.id===id ?{...el,value:el.value - 1 }:el)
       setCounters(updatedCounts)
   };
+  
   return (
     <div>
       <ul>
@@ -39,6 +40,7 @@ const App = () => {
           </li>
         ))}
       </ul>
+      <button onClick={addCounters}>Add counters </button>
     </div>
   );
 };
