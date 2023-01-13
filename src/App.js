@@ -41,9 +41,10 @@ const App = () => {
       <ul>
         {counters.map((el) => (
           <li key={el.id}>
-            <button onclick={() => incrementPlus(el.id)}>Plus</button>
+            <button onClick={() => incrementPlus(el.id)}>Plus</button>
             {el.value}
-            <button onclick={() => decrementMinus(el.id)}>Minus</button>
+            <button onClick={() => decrementMinus(el.id)}>Minus</button>
+            <button onClick={() => deleteCounter(el.id)}>Delete</button>
           </li>
         ))}
       </ul>
