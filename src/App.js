@@ -17,23 +17,25 @@ const App = () => {
     },
   ];
   
-  const [counters, setCounters] = useState(0);
-  const incrementPlus = () => {
+  const [counters, setCounters] = useState(initialCounters);
+  const incrementPlus = (id) => {
         const updatedCounts = counters.map(el=>
-          el.id===id ?{...el,value:e.value}:el)
+          el.id===id ?{...el,value:el.value +1 }:el)
           setCounters(updatedCounts)
   };
-  const decrementMinus = () => {
-    setCounters(counters - 1);
+  const decrementMinus = (id) => {
+    const updatedCounts = counters.map(el=>
+      el.id===id ?{...el,value:el.value - 1 }:el)
+      setCounters(updatedCounts)
   };
   return (
     <div>
       <ul>
         {counters.map((el) => (
           <li>
-            <button onclick={()=>incrementPlus()}>Plus</button>
+            <button onclick={()=>incrementPlus(el.id)}>Plus</button>
             {counters}
-            <button onclick={()=>decrementMinus()}>Plus</button>
+            <button onclick={()=>decrementMinus(el.id)}>Plus</button>
           </li>
         ))}
       </ul>
