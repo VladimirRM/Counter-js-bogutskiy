@@ -4,7 +4,9 @@ const App = () => {
 
   const [counters,setCounters] = useState(0)
 
-  const incrementPlus
+  const incrementPlus =()=>{
+    setCounters(counters + 1)
+  }
   return (
     <div>
       <button  onclick={incrementPlus}>Plus</button>
