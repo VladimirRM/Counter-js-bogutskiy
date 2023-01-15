@@ -9,17 +9,25 @@ const App = () => {
   const [counters, setCounters] = useState(initialCounters);
 
   const increment = (id) => {
-        const updatedCounts = counters.map(el=>
-          el.id===id ?{...el,value:el.value + 1}: el)
-          setCounters(updatedCounts)
+    const updatedCounts = counters.map((el) =>
+      el.id === id ? { ...el, value: el.value + 1 } : el
+    );
+    setCounters(updatedCounts);
   };
   const decrement = (id) => {
-     const updatedCounts = counters.map(el=>
-      el.id===id?{...el,value:el.value - 1}:el)
-      setCounters(updatedCounts)
+    const updatedCounts = counters.map((el) =>
+      el.id === id ? { ...el, value: el.value - 1 } : el
+    );
+    setCounters(updatedCounts);
   };
 
-  const 
+  const addCounters = () => {
+    const newCount = {
+      id: Math.random(),
+      value: 0,
+    };
+    setCounters([...counters, newCount]);
+  };
   return (
     <div>
       <ul>
