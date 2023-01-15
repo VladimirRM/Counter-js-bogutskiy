@@ -16,9 +16,15 @@ const App = () => {
   };
   return (
     <div>
-      <button onClick={() => increment()}>Plus</button>
-      {counters}
-      <button onClick={() => decrement()}>Minus</button>
+      <ul>
+        {counters.map((el) => (
+          <li key={el.id}>
+            <button onClick={() => increment()}>Plus</button>
+            {el.value}
+            <button onClick={() => decrement()}>Minus</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
