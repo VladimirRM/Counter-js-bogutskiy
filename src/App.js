@@ -16,7 +16,10 @@ const App = () => {
   const decrement = (id) => {
      const updatedCounts = counters.map(el=>
       el.id===id?{...el,value:el.value - 1}:el)
+      setCounters(updatedCounts)
   };
+
+  const 
   return (
     <div>
       <ul>
@@ -24,10 +27,11 @@ const App = () => {
           <li key={el.id}>
             <button onClick={() => increment(el.id)}>Plus</button>
             {el.value}
-            <button onClick={() => decrement()}>Minus</button>
+            <button onClick={() => decrement(el.id)}>Minus</button>
           </li>
         ))}
       </ul>
+      <button onClick={addCounters}>Add counters</button>
     </div>
   );
 };
