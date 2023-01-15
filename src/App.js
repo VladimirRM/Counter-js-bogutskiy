@@ -28,6 +28,10 @@ const App = () => {
     };
     setCounters([...counters, newCount]);
   };
+
+  const deleteCount =(id)=>{
+         setCounters(counters.filter(el=>el.id !==id))
+  }
   return (
     <div>
       <ul>
@@ -36,6 +40,7 @@ const App = () => {
             <button onClick={() => increment(el.id)}>Plus</button>
             {el.value}
             <button onClick={() => decrement(el.id)}>Minus</button>
+            <button onClick={() => deleteCount(el.id)}>Delete</button>
           </li>
         ))}
       </ul>
