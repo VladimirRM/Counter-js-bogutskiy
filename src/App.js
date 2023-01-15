@@ -13,8 +13,9 @@ const App = () => {
           el.id===id ?{...el,value:el.value + 1}: el)
           setCounters(updatedCounts)
   };
-  const decrement = () => {
-    setCounters(counters - 1);
+  const decrement = (id) => {
+     const updatedCounts = counters.map(el=>
+      el.id===id?{...el,value:el.value - 1}:el)
   };
   return (
     <div>
